@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Service Requests</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="admin" data-active="admin-requests" data-title="Service Requests">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <div class="mb-5 [&_h1]:text-[clamp(1.3rem,2.5vw,1.7rem)] [&_p]:text-mute">
+      <h1>Service Requests</h1>
+      <p>Track and manage all service requests from users, monitor their status, and ensure quick resolution.</p>
+    </div>
+
+    <section class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))]">
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-brand-100">📄</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Total Requests</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">2,973</p><p class="text-[.78rem] font-bold text-ok">↑ +15% <small>vs. last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-ok-bg">🕒</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">In Progress</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">842</p><p class="text-[.78rem] font-bold text-ok">↑ +12% <small>vs. last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-plum-bg">✔️</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Completed</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">2,041</p><p class="text-[.78rem] font-bold text-ok">↑ +18% <small>vs. last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-bad-bg">⚠️</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Pending</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">90</p><p class="text-[.78rem] font-bold text-bad">↓ -6% <small>vs. last month</small></p></div></div>
+    </section>
+
+    <div class="grid items-start gap-4 mt-6 grid-cols-[minmax(0,2fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)]">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Service Requests List</h2>
+        <div class="mb-4 flex flex-wrap gap-2.5 [&>input]:w-auto [&>input]:min-w-0 [&>input]:flex-[1_1_180px] [&>select]:w-auto [&>select]:min-w-0 [&>select]:flex-[1_1_180px]">
+          <input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" type="search" placeholder="Search by ID, user name, service type..." aria-label="Search requests" data-filter-list="requestsTable">
+          <select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" aria-label="Filter by service" data-filter-list="requestsTable" data-key="category">
+            <option value="">All Services</option><option>Car Service</option><option>Medical Service</option><option>Home Service</option><option>Maintenance</option><option>Emergency</option>
+          </select>
+          <select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" aria-label="Filter by status" data-filter-list="requestsTable" data-key="status">
+            <option value="">All Statuses</option><option>In Progress</option><option>Pending</option><option>Completed</option>
+          </select>
+          <a class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white px-[18px] py-2.5 text-[.95rem] rounded-lg" href="request-service.html">+ New Request</a>
+        </div>
+        <div class="overflow-x-auto" id="requestsTable">
+          <table class="w-full min-w-[680px] border-collapse text-[.88rem] [&_th]:whitespace-nowrap [&_th]:bg-brand-50 [&_th]:px-3 [&_th]:py-2.5 [&_th]:text-left [&_th]:text-[.78rem] [&_th]:font-bold [&_th]:text-mute [&_td]:border-b [&_td]:border-line [&_td]:px-3 [&_td]:py-2.5 [&_td]:align-middle [&_tbody_tr:hover]:bg-brand-50 [&_input]:accent-brand-500">
+            <thead><tr><th></th><th>ID</th><th>User</th><th>Service Type</th><th>Location</th><th>Status</th><th>Priority</th><th>Date &amp; Time</th><th></th></tr></thead>
+            <tbody data-render="table" data-source="requests"></tbody>
+          </table>
+        </div>
+        <div class="mt-3.5 flex flex-wrap items-center justify-between gap-2.5 text-[.85rem] text-mute">
+          <span data-count-for="requests" data-template="Showing 1 – {n} of 2,973 requests"></span>
+          <div class="pagination flex gap-1.5 [&_button]:h-8 [&_button]:min-w-8 [&_button]:rounded-lg [&_button]:border [&_button]:border-line [&_button]:bg-white [&_button.is-active]:border-brand-500 [&_button.is-active]:bg-brand-500 [&_button.is-active]:text-white"><button type="button" aria-label="Previous">‹</button><button type="button" class="is-active">1</button><button type="button">2</button><button type="button">3</button><button type="button">4</button><button type="button">5</button><button type="button" aria-label="Next">›</button></div>
+        </div>
+      </section>
+
+      <aside class="flex flex-col gap-4">
+        <section class="rounded-2xl bg-white p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Request by Service Type</h2>
+          <div class="flex flex-wrap items-center justify-center gap-5" data-total="2,973" data-caption="Total Requests" data-suffix="%" data-donut='[["Car Service",36],["Medical Service",32],["Home Service",22],["Emergency",10]]'></div>
+        </section>
+        <section class="rounded-2xl bg-white p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Request Status</h2>
+          <div class="mb-3 grid grid-cols-[minmax(0,1.3fr)_minmax(0,2fr)_auto] items-center gap-2.5 text-[.88rem] [&_small]:block"><span>Completed</span><div class="h-2 overflow-hidden rounded-full bg-brand-100 [&>span]:block [&>span]:h-full [&>span]:w-[var(--value,0%)] [&>span]:rounded-[inherit] [&>span]:bg-[var(--c,#1688f0)]" style="--value:69%;--c:#16a34a"><span></span></div><small>2,041 (69%)</small></div>
+          <div class="mb-3 grid grid-cols-[minmax(0,1.3fr)_minmax(0,2fr)_auto] items-center gap-2.5 text-[.88rem] [&_small]:block"><span>In Progress</span><div class="h-2 overflow-hidden rounded-full bg-brand-100 [&>span]:block [&>span]:h-full [&>span]:w-[var(--value,0%)] [&>span]:rounded-[inherit] [&>span]:bg-[var(--c,#1688f0)]" style="--value:28%"><span></span></div><small>842 (28%)</small></div>
+          <div class="mb-3 grid grid-cols-[minmax(0,1.3fr)_minmax(0,2fr)_auto] items-center gap-2.5 text-[.88rem] [&_small]:block"><span>Pending</span><div class="h-2 overflow-hidden rounded-full bg-brand-100 [&>span]:block [&>span]:h-full [&>span]:w-[var(--value,0%)] [&>span]:rounded-[inherit] [&>span]:bg-[var(--c,#1688f0)]" style="--value:3%;--c:#f5a31a"><span></span></div><small>90 (3%)</small></div>
+          <div class="mb-3 grid grid-cols-[minmax(0,1.3fr)_minmax(0,2fr)_auto] items-center gap-2.5 text-[.88rem] [&_small]:block"><span>Cancelled</span><div class="h-2 overflow-hidden rounded-full bg-brand-100 [&>span]:block [&>span]:h-full [&>span]:w-[var(--value,0%)] [&>span]:rounded-[inherit] [&>span]:bg-[var(--c,#1688f0)]" style="--value:0%;--c:#e5484d"><span></span></div><small>0 (0%)</small></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

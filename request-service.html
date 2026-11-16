@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Request a Service</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="client" data-active="request" data-title="Request a Service" data-page="request">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <section class="rounded-2xl max-w-[640px] mx-auto bg-white p-5 shadow-card">
+      <div class="mb-5 [&_h1]:text-[clamp(1.3rem,2.5vw,1.7rem)] [&_p]:text-mute">
+        <h1>Request a Service</h1>
+        <p>Fill in the details below to request a service.</p>
+      </div>
+      <form id="requestForm" data-form data-success="Request submitted! A provider will contact you shortly." data-redirect="home.html">
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="rName">Full Name</label><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>🙍</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="rName" name="name" type="text" placeholder="Enter your full name" required></div></div>
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="rPhone">Phone Number</label><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>📞</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="rPhone" name="phone" type="tel" placeholder="Enter your phone number" required></div></div>
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="serviceCategory">Service Category</label><select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="serviceCategory" name="service" required></select></div>
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="rLocation">Your Location</label><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>📍</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="rLocation" name="location" type="text" placeholder="Enter your address" required></div></div>
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="rProblem">Describe Your Problem</label><textarea class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] min-h-24 resize-y w-full" id="rProblem" name="problem" placeholder="Write service details here..." required></textarea></div>
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="rId">ID Number</label><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>🪪</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="rId" name="idNumber" type="text" inputmode="numeric" placeholder="Enter your ID number" required></div></div>
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800">
+          <span class="text-[.88rem] font-bold text-navy-800">Upload Image (Optional)</span>
+          <label class="flex cursor-pointer flex-col items-center gap-1 rounded-2xl border-2 border-dashed border-brand-200 bg-[#f8fbff] p-[18px] text-center hover:bg-brand-50 [&_input]:hidden [&_img]:max-h-40 [&_img]:rounded-lg [&_strong]:text-brand-600">
+            <input id="imageInput" type="file" name="image" accept="image/*">
+            <span id="imageHint"><strong>📄 Upload an Image</strong><br><small>Add a photo of the problem</small></span>
+            <img id="imagePreview" alt="Preview of the uploaded problem" hidden>
+          </label>
+        </div>
+        <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-navy-800 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="submit">Submit Request →</button>
+      </form>
+      <p class="text-mute mt-4 text-center">🚚 We're here to help you!</p>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

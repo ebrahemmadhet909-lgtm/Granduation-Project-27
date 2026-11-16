@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Plumbing</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="client" data-active="services" data-title="Plumbing Maintenance">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <section class="flex items-center justify-between gap-6 rounded-[22px] bg-[linear-gradient(120deg,#cfe6ff,#e8f3ff)] px-8 py-7 max-[600px]:px-5 max-[600px]:py-5">
+      <div class="min-w-0 flex-1 [&_h1]:mb-2 [&_h1]:text-[clamp(1.5rem,3vw,2.3rem)] [&_h1+p]:max-w-[520px] [&_h1+p]:text-[#35557d]">
+        <p class="mb-1.5 text-[.85rem] font-extrabold uppercase tracking-[.06em] text-gold">Professional Service</p>
+        <h1>Reliable Plumbing Solutions For Your Home!</h1>
+        <p>Expert plumbers for leaks, pipes and repairs. Fast and professional service you can trust.</p>
+      </div>
+      <div class="grid aspect-square w-[clamp(90px,14vw,150px)] shrink-0 place-items-center rounded-full bg-white text-[clamp(2.5rem,6vw,4.5rem)] shadow-card" aria-hidden="true">🔧</div>
+    </section>
+
+    <div class="grid items-start gap-4 grid-cols-[minmax(0,1fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)] mt-6">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Book Plumbing Service</h2>
+        <form data-form data-success="Plumbing service requested. A plumber will contact you." data-redirect="home.html">
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>🙍</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="name" type="text" placeholder="Your Name" required></div></div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>📞</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="phone" type="tel" placeholder="Phone Number" required></div></div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800">
+            <select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="type" aria-label="Plumbing service" required>
+              <option value="" disabled selected>Select Plumbing Service</option>
+              <option>Leak Repair</option><option>Pipe Repair</option><option>Installation</option><option>Inspection</option>
+            </select>
+          </div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><textarea class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] min-h-24 resize-y w-full" name="problem" placeholder="Describe Your Plumbing Problem" required></textarea></div>
+          <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="submit">➤ Request Plumbing Service</button>
+        </form>
+      </section>
+
+      <div class="flex flex-col gap-4">
+        <section class="group rounded-2xl bg-navy-800 text-white [&_h2]:text-white [&_h3]:text-white [&_small]:text-[#b7cdea] card--dark p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Our Plumbing Services</h2>
+          <ul class="grid gap-3 grid-cols-[repeat(auto-fit,minmax(90px,1fr))] text-center [&_li]:flex [&_li]:flex-col [&_li]:items-center [&_li]:gap-1.5 [&_li]:text-[.85rem] [&_li]:font-bold [&_span]:grid [&_span]:h-11 [&_span]:w-11 [&_span]:place-items-center [&_span]:rounded-full [&_span]:bg-white [&_span]:text-[1.2rem]">
+            <li><span>💧</span>Leak Repair</li><li><span>🚰</span>Pipe Repair</li><li><span>🔩</span>Installation</li><li><span>✅</span>Inspection</li>
+          </ul>
+        </section>
+        <section class="group rounded-2xl bg-navy-800 text-white [&_h2]:text-white [&_h3]:text-white [&_small]:text-[#b7cdea] card--dark p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Why Choose Our Service?</h2>
+          <ul class="grid gap-2.5 grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] [&_li]:flex [&_li]:items-center [&_li]:gap-2 [&_li]:text-[.9rem] [&_li]:font-semibold [&_li]:before:grid [&_li]:before:h-5 [&_li]:before:w-5 [&_li]:before:shrink-0 [&_li]:before:place-items-center [&_li]:before:rounded-full [&_li]:before:bg-brand-100 [&_li]:before:text-[.75rem] [&_li]:before:font-extrabold [&_li]:before:text-brand-600 [&_li]:before:content-['✓'] group-[.card--dark]:[&_li]:before:bg-white">
+            <li>Professional Plumbers</li><li>Affordable Prices</li><li>Fast &amp; Reliable Service</li><li>Quality Guarantee</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

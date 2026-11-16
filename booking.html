@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Booking Request</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="client" data-active="services" data-title="Booking Request System" data-page="booking">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <section class="flex items-center justify-between gap-6 rounded-[22px] bg-[linear-gradient(120deg,#cfe6ff,#e8f3ff)] px-8 py-7 max-[600px]:px-5 max-[600px]:py-5">
+      <div class="min-w-0 flex-1 [&_h1]:mb-2 [&_h1]:text-[clamp(1.5rem,3vw,2.3rem)] [&_h1+p]:max-w-[520px] [&_h1+p]:text-[#35557d]">
+        <p class="mb-1.5 text-[.85rem] font-extrabold uppercase tracking-[.06em] text-gold">Book Your Service</p>
+        <h1>Request A Service Easily!</h1>
+        <p>Choose your service, select your preferred date and let our professionals take care of the rest.</p>
+      </div>
+      <div class="grid aspect-square w-[clamp(90px,14vw,150px)] shrink-0 place-items-center rounded-full bg-white text-[clamp(2.5rem,6vw,4.5rem)] shadow-card" aria-hidden="true">📅</div>
+    </section>
+
+    <div class="grid items-start gap-4 mt-6 grid-cols-[minmax(0,2fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)]">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Booking Information</h2>
+        <p class="text-mute mb-3.5">Please complete the details below to book your service.</p>
+        <form id="bookingForm" data-form data-success="Booking confirmed! A provider will contact you shortly.">
+          <div class="grid gap-3.5 grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))]">
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="bName">Full Name</label><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="bName" name="name" type="text" placeholder="Enter your full name" required></div>
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="bPhone">Phone Number</label><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="bPhone" name="phone" type="tel" placeholder="Enter your phone number" required></div>
+          </div>
+          <div class="grid gap-3.5 grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))]">
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="bService">Select Service</label><select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="bService" name="service" required></select></div>
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="bDate">Preferred Date</label><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="bDate" name="date" type="date" required></div>
+          </div>
+          <div class="grid gap-3.5 grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))]">
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800">
+              <label for="bTime">Preferred Time</label>
+              <select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="bTime" name="time" required>
+                <option value="" disabled selected>Select a time</option>
+                <option>09:00 AM</option><option>11:00 AM</option><option>01:00 PM</option><option>03:00 PM</option><option>05:00 PM</option><option>07:00 PM</option>
+              </select>
+            </div>
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="bAddress">Service Address</label><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="bAddress" name="address" type="text" placeholder="Enter your address" required></div>
+          </div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="bNote">Problem Description</label><textarea class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] min-h-24 resize-y w-full" id="bNote" name="note" placeholder="Describe the service you need..."></textarea></div>
+        </form>
+      </section>
+
+      <div class="flex flex-col gap-4">
+        <section class="group rounded-2xl bg-navy-800 text-white [&_h2]:text-white [&_h3]:text-white [&_small]:text-[#b7cdea] card--dark p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Booking Summary</h2>
+          <dl>
+            <div class="flex justify-between gap-3 border-b border-white/20 py-2 text-[.9rem] last:border-0 [&_dd]:text-right [&_dd]:font-bold"><dt>Service</dt><dd data-summary="service">Not selected yet</dd></div>
+            <div class="flex justify-between gap-3 border-b border-white/20 py-2 text-[.9rem] last:border-0 [&_dd]:text-right [&_dd]:font-bold"><dt>Booking Date</dt><dd data-summary="date">Not selected</dd></div>
+            <div class="flex justify-between gap-3 border-b border-white/20 py-2 text-[.9rem] last:border-0 [&_dd]:text-right [&_dd]:font-bold"><dt>Preferred Time</dt><dd data-summary="time">Not selected</dd></div>
+            <div class="flex justify-between gap-3 border-b border-white/20 py-2 text-[.9rem] last:border-0 [&_dd]:text-right [&_dd]:font-bold"><dt>Estimated Price</dt><dd data-summary="price">Not selected</dd></div>
+          </dl>
+        </section>
+        <section class="group rounded-2xl bg-navy-800 text-white [&_h2]:text-white [&_h3]:text-white [&_small]:text-[#b7cdea] card--dark p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Ready to Book?</h2>
+          <p class="mb-3"><small>Review your information before submitting.</small></p>
+          <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="submit" form="bookingForm">➤ Confirm Booking</button>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

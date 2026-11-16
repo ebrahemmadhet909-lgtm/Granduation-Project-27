@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Only the few global rules that utilities cannot express */
+@layer base {
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  h1, h2, h3 { @apply font-bold text-navy-800 leading-tight; }
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.17em; }
+  small { @apply text-[0.8rem] text-mute; }
+  input::placeholder, textarea::placeholder { color: #757575; }
+  [hidden] { display: none !important; }
+  :focus-visible { outline: 3px solid theme('colors.brand.200'); outline-offset: 2px; }
+}

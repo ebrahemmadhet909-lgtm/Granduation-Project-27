@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Service Details</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="client" data-active="services" data-title="Service Details" data-page="details">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <section class="flex items-center justify-between gap-6 rounded-[22px] bg-[linear-gradient(120deg,#cfe6ff,#e8f3ff)] px-8 py-7 max-[600px]:px-5 max-[600px]:py-5">
+      <div class="min-w-0 flex-1 [&_h1]:mb-2 [&_h1]:text-[clamp(1.5rem,3vw,2.3rem)] [&_h1+p]:max-w-[520px] [&_h1+p]:text-[#35557d]">
+        <p class="mb-1.5 text-[.85rem] font-extrabold uppercase tracking-[.06em] text-gold">Our Services</p>
+        <h1>Professional Home Services</h1>
+        <p>Reliable solutions for all your home maintenance needs. Choose your service and book a professional today.</p>
+      </div>
+      <div class="grid aspect-square w-[clamp(90px,14vw,150px)] shrink-0 place-items-center rounded-full bg-white text-[clamp(2.5rem,6vw,4.5rem)] shadow-card" aria-hidden="true">🧑‍🔧</div>
+    </section>
+
+    <div class="grid items-start gap-4 mt-6 grid-cols-[minmax(0,2fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)]">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <div class="flex flex-wrap items-center gap-4 rounded-2xl bg-brand-50 p-4">
+          <div class="grid h-[76px] w-24 place-items-center rounded-lg bg-brand-100 text-[2.4rem]" data-bind="icon">🛠️</div>
+          <div>
+            <h2 data-bind="name">Home Maintenance</h2>
+            <p class="text-mute">Professional Service</p>
+            <p><span class="tracking-[2px] text-gold">★★★★★</span> <small>4.9 (120 Reviews)</small></p>
+          </div>
+        </div>
+        <h3 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white mt-5">Service Description</h3>
+        <p class="text-mute" data-bind="desc">Reliable and professional home maintenance services from experienced technicians.</p>
+        <h3 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white mt-5">What's Included?</h3>
+        <ul class="grid gap-2.5 grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))] [&_li]:flex [&_li]:items-center [&_li]:gap-2 [&_li]:text-[.9rem] [&_li]:font-semibold [&_li]:before:grid [&_li]:before:h-5 [&_li]:before:w-5 [&_li]:before:shrink-0 [&_li]:before:place-items-center [&_li]:before:rounded-full [&_li]:before:bg-brand-100 [&_li]:before:text-[.75rem] [&_li]:before:font-extrabold [&_li]:before:text-brand-600 [&_li]:before:content-['✓'] group-[.card--dark]:[&_li]:before:bg-white">
+          <li>Professional Technician</li><li>Quality Service</li><li>Fast Response</li><li>Customer Support</li>
+        </ul>
+      </section>
+
+      <div class="flex flex-col gap-4">
+        <section class="group rounded-2xl bg-navy-800 text-white [&_h2]:text-white [&_h3]:text-white [&_small]:text-[#b7cdea] card--dark p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Estimated Price</h2>
+          <p class="my-1.5 text-[1.8rem] font-extrabold text-white" data-bind="price">250 - 500 EGP</p>
+          <small>Final price depends on the service required.</small>
+        </section>
+        <section class="group rounded-2xl bg-navy-800 text-white [&_h2]:text-white [&_h3]:text-white [&_small]:text-[#b7cdea] card--dark p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Request This Service</h2>
+          <form id="quickBook">
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="name" type="text" placeholder="Your Name"></div>
+            <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="note" type="text" placeholder="Describe Your Problem"></div>
+            <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="submit">➤ Book Service</button>
+          </form>
+          <a class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px border border-line bg-white text-navy-800 w-full mt-2.5 px-[18px] py-2.5 text-[.95rem] rounded-lg" id="detailsBook" href="booking.html">Go to full booking form</a>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

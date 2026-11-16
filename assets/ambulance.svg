@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 170" role="img" aria-label="Ambulance">
+  <rect x="95" y="4" width="70" height="18" rx="9" fill="#f0506a"/>
+  <path d="M10 40h150c12 0 18 8 24 18l20 22c8 6 12 12 14 26v20H10z" fill="#fff" stroke="#7aaee0" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="22" y="52" width="85" height="52" rx="6" fill="#4fa3ea"/>
+  <rect x="116" y="52" width="60" height="52" fill="#dceeff"/>
+  <path d="M168 58l26 6 22 40h-48z" fill="#6bb8f0"/>
+  <path d="M141 66h14v12h12v14h-12v12h-14V92h-12V78h12z" fill="#ef4f55"/>
+  <rect x="12" y="124" width="228" height="16" rx="6" fill="#d3e4f5"/>
+  <circle cx="58" cy="140" r="24" fill="#1f3b5c"/><circle cx="58" cy="140" r="11" fill="#b8cde3"/>
+  <circle cx="190" cy="140" r="24" fill="#1f3b5c"/><circle cx="190" cy="140" r="11" fill="#b8cde3"/>
+</svg>

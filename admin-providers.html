@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Service Providers</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="admin" data-active="admin-providers" data-title="Service Providers">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <div class="mb-5 [&_h1]:text-[clamp(1.3rem,2.5vw,1.7rem)] [&_p]:text-mute">
+      <h1>Service Providers</h1>
+      <p>Manage and monitor all service providers, their details, ratings, and performance.</p>
+    </div>
+
+    <section class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))]">
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-brand-100">🧑‍🔧</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Total Providers</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">458</p><p class="text-[.78rem] font-bold text-ok">↑ 6.4% <small>vs. last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-ok-bg">⭐</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Active Providers</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">412</p><p class="text-[.78rem] font-bold text-ok">↑ 5.2% <small>vs. last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-plum-bg">🕓</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Pending Verification</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">28</p><p class="text-[.78rem] font-bold text-ok">↑ 3.4% <small>vs. last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-bad-bg">🚫</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Blocked Providers</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">18</p><p class="text-[.78rem] font-bold text-bad">↓ 2.1% <small>vs. last month</small></p></div></div>
+    </section>
+
+    <div class="grid items-start gap-4 mt-6 grid-cols-[minmax(0,2fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)]">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Providers List</h2>
+        <div class="group mb-4 flex flex-wrap gap-2.5 [&>input]:w-auto [&>input]:min-w-0 [&>input]:flex-[1_1_180px] [&>select]:w-auto [&>select]:min-w-0 [&>select]:flex-[1_1_180px] [&_option]:text-ink toolbar--dark">
+          <input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" type="search" placeholder="Search by name, email, phone, or service type..." aria-label="Search providers" data-filter-list="providersTable">
+          <select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" aria-label="Filter by service" data-filter-list="providersTable" data-key="category">
+            <option value="">All Services</option><option>Car Services</option><option>Medical Services</option><option>Home Services</option><option>Plumbing</option>
+          </select>
+          <select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" aria-label="Filter by status" data-filter-list="providersTable" data-key="status">
+            <option value="">All Statuses</option><option>Active</option><option>Pending</option><option>Suspended</option>
+          </select>
+          <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white px-[18px] py-2.5 text-[.95rem] rounded-lg" type="button" data-modal-open="#addProviderModal">+ Add Provider</button>
+        </div>
+        <div class="overflow-x-auto" id="providersTable">
+          <table class="w-full min-w-[680px] border-collapse text-[.88rem] [&_th]:whitespace-nowrap [&_th]:bg-brand-50 [&_th]:px-3 [&_th]:py-2.5 [&_th]:text-left [&_th]:text-[.78rem] [&_th]:font-bold [&_th]:text-mute [&_td]:border-b [&_td]:border-line [&_td]:px-3 [&_td]:py-2.5 [&_td]:align-middle [&_tbody_tr:hover]:bg-brand-50 [&_input]:accent-brand-500">
+            <thead><tr><th>ID</th><th>Name</th><th>Email</th><th>Phone</th><th>Service Type</th><th>Status</th><th>Rating</th><th></th></tr></thead>
+            <tbody data-render="table" data-source="providers"></tbody>
+          </table>
+        </div>
+        <div class="mt-3.5 flex flex-wrap items-center justify-between gap-2.5 text-[.85rem] text-mute">
+          <span data-count-for="providers" data-template="Showing 1 – {n} of 458 providers"></span>
+          <div class="pagination flex gap-1.5 [&_button]:h-8 [&_button]:min-w-8 [&_button]:rounded-lg [&_button]:border [&_button]:border-line [&_button]:bg-white [&_button.is-active]:border-brand-500 [&_button.is-active]:bg-brand-500 [&_button.is-active]:text-white"><button type="button">1</button><button type="button" class="is-active">2</button><button type="button">3</button><button type="button">4</button></div>
+        </div>
+      </section>
+
+      <aside class="flex flex-col gap-4">
+        <section class="rounded-2xl bg-white p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Provider Distribution</h2>
+          <div class="flex flex-wrap items-center justify-center gap-5" data-total="458" data-caption="Total Providers" data-suffix="%" data-donut='[["Car Services",35],["Medical Services",30],["Home Services",20],["Plumbing",15]]'></div>
+        </section>
+        <section class="rounded-2xl bg-white p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Top Rated Providers <a href="#">View all</a></h2>
+          <ul class="flex flex-col gap-3">
+            <li class="flex items-center gap-3 border-b border-line pb-3 last:border-0 last:pb-0 [&_strong]:block [&_strong]:text-[.9rem]"><span class="inline-grid h-[34px] w-[34px] shrink-0 place-items-center rounded-full bg-brand-100 text-[.8rem] font-extrabold text-navy-800">AH</span><div><strong>Ahmed Hassan</strong><small>Car Services</small></div><div class="ml-auto text-right [&_small]:block"><strong>★ 4.9</strong><small>120 reviews</small></div></li>
+            <li class="flex items-center gap-3 border-b border-line pb-3 last:border-0 last:pb-0 [&_strong]:block [&_strong]:text-[.9rem]"><span class="inline-grid h-[34px] w-[34px] shrink-0 place-items-center rounded-full bg-brand-100 text-[.8rem] font-extrabold text-navy-800">LH</span><div><strong>Laila Hussein</strong><small>Medical Services</small></div><div class="ml-auto text-right [&_small]:block"><strong>★ 4.8</strong><small>98 reviews</small></div></li>
+            <li class="flex items-center gap-3 border-b border-line pb-3 last:border-0 last:pb-0 [&_strong]:block [&_strong]:text-[.9rem]"><span class="inline-grid h-[34px] w-[34px] shrink-0 place-items-center rounded-full bg-brand-100 text-[.8rem] font-extrabold text-navy-800">KS</span><div><strong>Kareem Samir</strong><small>Home Services</small></div><div class="ml-auto text-right [&_small]:block"><strong>★ 4.8</strong><small>85 reviews</small></div></li>
+            <li class="flex items-center gap-3 border-b border-line pb-3 last:border-0 last:pb-0 [&_strong]:block [&_strong]:text-[.9rem]"><span class="inline-grid h-[34px] w-[34px] shrink-0 place-items-center rounded-full bg-brand-100 text-[.8rem] font-extrabold text-navy-800">YS</span><div><strong>Youssef Salem</strong><small>Medical Services</small></div><div class="ml-auto text-right [&_small]:block"><strong>★ 4.7</strong><small>76 reviews</small></div></li>
+          </ul>
+        </section>
+        <section class="rounded-2xl bg-white p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Recent Activity</h2>
+          <ul class="flex flex-col gap-3">
+            <li class="flex items-center gap-3 border-b border-line pb-3 last:border-0 last:pb-0 [&_strong]:block [&_strong]:text-[.9rem]"><div><strong>New provider registered</strong><small>Ahmed Mohamed joined the platform</small></div><small class="ml-auto text-right [&_small]:block">5 minutes ago</small></li>
+            <li class="flex items-center gap-3 border-b border-line pb-3 last:border-0 last:pb-0 [&_strong]:block [&_strong]:text-[.9rem]"><div><strong>Provider verification approved</strong><small>Provider is now verified</small></div><small class="ml-auto text-right [&_small]:block">16 minutes ago</small></li>
+            <li class="flex items-center gap-3 border-b border-line pb-3 last:border-0 last:pb-0 [&_strong]:block [&_strong]:text-[.9rem]"><div><strong>Provider subscription renewed</strong><small>Subscription successfully renewed</small></div><small class="ml-auto text-right [&_small]:block">1 hour ago</small></li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <dialog class="m-auto w-[min(480px,92vw)] rounded-2xl border-0 p-6 shadow-2xl backdrop:bg-navy-900/55 [&_h2]:mb-4" id="addProviderModal">
+    <h2>Add Service Provider</h2>
+    <form data-add="providers">
+      <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="pName">Full Name</label><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="pName" name="name" type="text" required></div>
+      <div class="grid gap-3.5 grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))]">
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="pEmail">Email</label><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="pEmail" name="email" type="email" required></div>
+        <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="pPhone">Phone</label><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="pPhone" name="phone" type="tel" required></div>
+      </div>
+      <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><label for="pType">Service Type</label>
+        <select class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="pType" name="type"><option>Car Services</option><option>Medical Services</option><option>Home Services</option><option>Plumbing</option></select>
+      </div>
+      <div class="flex justify-end gap-2.5">
+        <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px border border-line bg-white text-navy-800 px-[18px] py-2.5 text-[.95rem] rounded-lg" type="button" data-modal-close>Cancel</button>
+        <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white px-[18px] py-2.5 text-[.95rem] rounded-lg" type="submit">Add Provider</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Login</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-page="login">
+  <div class="grid min-h-screen grid-cols-2 max-[860px]:grid-cols-1">
+    <aside class="flex flex-col items-center justify-center gap-[22px] bg-[linear-gradient(160deg,#0a2a52,#103a6f_60%,#0c2d5a)] px-10 py-12 text-center text-white max-[860px]:hidden [&_h2]:text-[1.15rem] [&_h2]:text-white [&_p]:max-w-[380px] [&_p]:text-[#c4d8f2]">
+      <div class="flex items-center gap-2.5 text-[2.6rem] font-extrabold [&_img]:h-16 [&_img]:w-16 [&_b]:text-accent"><img src="assets/logo.svg" alt=""><span>Servi<b>X</b></span></div>
+      <p class="text-[.8rem] tracking-[.05em] !text-[#8db4e6]">Help is Closer Than You Think</p>
+      <h2>All Emergency and assistance Services in one Place</h2>
+      <p>Whether you need a hospital, an electrician, a plumber or any other service, ServiX connects you to the nearest solution.</p>
+      <ul class="flex flex-wrap justify-center gap-[18px] text-[.78rem] [&_li]:flex [&_li]:max-w-[90px] [&_li]:flex-col [&_li]:items-center [&_li]:gap-1.5 [&_span]:grid [&_span]:h-[46px] [&_span]:w-[46px] [&_span]:place-items-center [&_span]:rounded-full [&_span]:border-2 [&_span]:border-[#3d7cc9] [&_span]:bg-white/5 [&_span]:text-[1.2rem]">
+        <li><span>🛠️</span>General maintenance</li>
+        <li><span>⚡</span>Electrical</li>
+        <li><span>➕</span>Hospital &amp; clinics</li>
+        <li><span>🚗</span>Other emergency services</li>
+      </ul>
+      <div class="grid w-[150px] place-items-center gap-1 rounded-[26px] border-4 border-[#0b1d36] bg-[#dce9f7] px-3 py-[22px] text-[.8rem] font-bold text-navy-800 [&_span]:text-[2rem]"><span>📍</span>Service near you →</div>
+      <p>You are not alone… We're here to help you.</p>
+    </aside>
+
+    <main class="grid place-items-center bg-white px-5 py-8">
+      <div class="w-[min(420px,100%)] [&_h1]:text-center [&_h1]:text-2xl [&>h1+p]:mb-5 [&>h1+p]:text-center [&>h1+p]:text-mute [&_button+button]:mt-2.5">
+        <div class="mb-[18px] hidden text-center text-[2rem] font-extrabold text-navy-800 max-[860px]:block [&_b]:text-accent [&_img]:mx-auto [&_img]:mb-1 [&_img]:w-16"><img src="assets/logo.svg" alt="">Servi<b>X</b></div>
+        <h1 data-auth-title>Welcome back!</h1>
+        <p data-auth-subtitle>Sign in to continue and enjoy our services</p>
+
+        <form id="loginForm" novalidate>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800" data-signup-only hidden>
+            <div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>🙍</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" id="fullName" name="fullName" type="text" placeholder="Full name" autocomplete="name"></div>
+          </div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800">
+            <div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>✉️</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="identity" type="text" placeholder="Email or Phone Number" autocomplete="username" required></div>
+          </div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800">
+            <div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>🔒</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="password" type="password" placeholder="Password" autocomplete="current-password" required></div>
+          </div>
+          <div class="mb-4 flex flex-wrap items-center justify-between gap-2 text-[.88rem] [&_a]:font-semibold [&_a]:text-brand-600" data-login-only>
+            <label class="flex items-center gap-2 text-[.9rem] [&_input]:h-[18px] [&_input]:w-[18px] [&_input]:accent-brand-500"><input type="checkbox" name="remember" checked> Remember me</label>
+            <a href="#" data-toast="Password reset link sent (demo)">Forgot password?</a>
+          </div>
+          <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-navy-800 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="submit" data-auth-submit>Log In <span aria-hidden="true">→</span></button>
+        </form>
+
+        <div class="my-3.5 flex items-center gap-3 text-[.85rem] text-mute before:h-px before:flex-1 before:bg-line before:content-[''] after:h-px after:flex-1 after:bg-line after:content-['']">Or</div>
+        <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-navy-800 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="button" data-signin="client">🇬 Sign In With Google</button>
+        <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="button" data-signin="client">👤 Continue as Guest</button>
+
+        <p class="mt-[18px] text-center text-[.9rem] [&_a]:font-bold [&_a]:text-brand-600"><span data-auth-switch-text>Don't have an account?</span> <a href="#" data-auth-toggle>Create an account</a></p>
+        <p class="mt-3.5 text-center"><small>Demo tip: an email starting with “admin” opens the admin dashboard.</small></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

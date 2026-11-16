@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Contact</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="client" data-active="contact" data-title="Contact">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <section class="flex items-center justify-between gap-6 rounded-[22px] bg-[linear-gradient(120deg,#cfe6ff,#e8f3ff)] px-8 py-7 max-[600px]:px-5 max-[600px]:py-5">
+      <div class="min-w-0 flex-1 [&_h1]:mb-2 [&_h1]:text-[clamp(1.5rem,3vw,2.3rem)] [&_h1+p]:max-w-[520px] [&_h1+p]:text-[#35557d]">
+        <p class="mb-1.5 text-[.85rem] font-extrabold uppercase tracking-[.06em] text-gold">Get in Touch</p>
+        <h1>We'd Love to Hear From You!</h1>
+        <p>Have a question, suggestion, or need assistance? Our team is here to help.</p>
+      </div>
+      <div class="grid aspect-square w-[clamp(90px,14vw,150px)] shrink-0 place-items-center rounded-full bg-white text-[clamp(2.5rem,6vw,4.5rem)] shadow-card" aria-hidden="true">🎧</div>
+    </section>
+
+    <div class="grid items-start gap-4 grid-cols-[minmax(0,1fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)] mt-6">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Send Us a Message</h2>
+        <form data-form data-success="Message sent! We'll get back to you soon.">
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>🙍</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="name" type="text" placeholder="Your Name" required></div></div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><div class="relative [&>span]:pointer-events-none [&>span]:absolute [&>span]:left-[13px] [&>span]:top-1/2 [&>span]:-translate-y-1/2 [&_input]:pl-10"><span>✉️</span><input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" name="email" type="email" placeholder="Your Email" required></div></div>
+          <div class="mb-3.5 flex flex-col gap-1.5 [&>label]:text-[.88rem] [&>label]:font-bold [&>label]:text-navy-800"><textarea class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] min-h-24 resize-y w-full" name="message" placeholder="Your Message" required></textarea></div>
+          <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white w-full px-[18px] py-2.5 text-[.95rem] rounded-lg" type="submit">➤ Send Message</button>
+        </form>
+      </section>
+
+      <div class="flex flex-col gap-4">
+        <section class="group rounded-2xl bg-navy-800 text-white [&_h2]:text-white [&_h3]:text-white [&_small]:text-[#b7cdea] card--dark p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Contact Information</h2>
+          <ul class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(130px,1fr))] text-center [&_li]:flex [&_li]:flex-col [&_li]:items-center [&_li]:gap-1 [&_li]:text-[.85rem] [&_span]:mb-1 [&_span]:grid [&_span]:h-11 [&_span]:w-11 [&_span]:place-items-center [&_span]:rounded-full [&_span]:bg-brand-500 [&_span]:text-[1.2rem]">
+            <li><span>📞</span><strong>Call Us</strong><a href="tel:1234">1234</a></li>
+            <li><span>✉️</span><strong>Email Us</strong><a href="mailto:support@servix.com">support@servix.com</a></li>
+            <li><span>📍</span><strong>Our Location</strong>123 Main Street, Cairo, Egypt</li>
+          </ul>
+        </section>
+        <section class="rounded-2xl bg-white p-5 shadow-card">
+          <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Our Location</h2>
+          <div class="relative min-h-[220px] overflow-hidden rounded-2xl bg-[#e4ecef] bg-[linear-gradient(115deg,transparent_46%,#fff_46%_50%,transparent_50%),linear-gradient(25deg,transparent_58%,#fff_58%_62%,transparent_62%),radial-gradient(circle_at_20%_30%,#cfe8c9_0_14%,transparent_15%),radial-gradient(circle_at_80%_70%,#cfe8c9_0_12%,transparent_13%)]"><span class="absolute left-1/2 top-3 -translate-x-1/2 rounded-full bg-white px-3 py-1 text-[.8rem] font-bold shadow-card">📍 ServiX HQ</span></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Home Services</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="client" data-active="services" data-title="Home Services">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <section class="flex items-center justify-between gap-6 rounded-[22px] bg-[linear-gradient(120deg,#cfe6ff,#e8f3ff)] px-8 py-7 max-[600px]:px-5 max-[600px]:py-5">
+      <div class="min-w-0 flex-1 [&_h1]:mb-2 [&_h1]:text-[clamp(1.5rem,3vw,2.3rem)] [&_h1+p]:max-w-[520px] [&_h1+p]:text-[#35557d]">
+        <p class="mb-1.5 text-[.85rem] font-extrabold uppercase tracking-[.06em] text-gold">ServiX Home Care</p>
+        <h1>Everything Your Home Needs!</h1>
+        <p>Professional home services at your fingertips. Reliable technicians, quality work and easy booking.</p>
+      </div>
+      <img class="w-[clamp(120px,20vw,220px)] shrink-0" src="./publilc/IMGS/WhatsApp Image 2026-11-11 at 5.08.57 PM.jpeg" alt="">
+    </section>
+
+    <section class="mt-6">
+      <div class="group mb-4 flex flex-wrap gap-2.5 [&>input]:w-auto [&>input]:min-w-0 [&>input]:flex-[1_1_180px] [&>select]:w-auto [&>select]:min-w-0 [&>select]:flex-[1_1_180px] [&_option]:text-ink toolbar--dark">
+        <input class="rounded-lg border border-line bg-[#f4f9ff] px-3.5 py-[11px] transition focus:border-brand-500 focus:outline-none focus:ring-[3px] focus:ring-brand-100 [&:user-invalid]:border-bad group-[.toolbar--dark]:border-navy-800 group-[.toolbar--dark]:bg-navy-800 group-[.toolbar--dark]:text-white group-[.toolbar--dark]:placeholder:text-[#b7cdea] w-full" type="search" placeholder="Search home services..." aria-label="Search home services" data-filter-list="homeGrid">
+      </div>
+      <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Explore Home Services</h2>
+      <div class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))]" id="homeGrid" data-render="cards" data-source="homeServices"></div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

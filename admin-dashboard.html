@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Admin Dashboard</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="admin" data-active="dashboard" data-title="Admin Dashboard">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <div class="mb-5 [&_h1]:text-[clamp(1.3rem,2.5vw,1.7rem)] [&_p]:text-mute">
+      <h1>Welcome to ServiX Admin Dashboard</h1>
+      <p>Manage platform performance, services, and users with ease.</p>
+    </div>
+
+    <section class="grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))]">
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-bad-bg">🚨</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Emergency Requests</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">412</p><p class="text-[.78rem] font-bold text-ok">↑ 22% <small>vs last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-plum-bg">📋</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Service Requests</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">2,973</p><p class="text-[.78rem] font-bold text-ok">↑ 15% <small>vs last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-ok-bg">🧑‍🔧</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Service Providers</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">458</p><p class="text-[.78rem] font-bold text-ok">↑ 8% <small>vs last month</small></p></div></div>
+      <div class="flex items-center gap-3.5 rounded-2xl p-4 shadow-card bg-white"><span class="grid h-11 w-11 shrink-0 place-items-center rounded-full text-[1.2rem] group-[.stat--dark]:bg-white group-[.card--dark]:bg-white bg-brand-100">👥</span><div><p class="text-[.82rem] font-semibold text-mute group-[.stat--dark]:text-white">Total Users</p><p class="text-[1.6rem] font-extrabold leading-[1.1] text-navy-800 group-[.stat--dark]:text-white">1,248</p><p class="text-[.78rem] font-bold text-ok">↑ 12% <small>vs last month</small></p></div></div>
+    </section>
+
+    <div class="grid items-start gap-4 mt-6 grid-cols-[minmax(0,2fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)]">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Requests · Last 7 Days</h2>
+        <div data-label="Requests over the last 7 days" data-line-chart='{"labels":["Sat","Sun","Mon","Tue","Wed","Thu","Fri"],"series":[{"name":"Regular Requests","color":1,"values":[100,150,205,255,305,360,430]},{"name":"Emergency Requests","color":4,"values":[70,100,145,175,230,280,340]}]}'></div>
+      </section>
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Service Distribution</h2>
+        <div class="flex flex-wrap items-center justify-center gap-5" data-total="2,973" data-caption="Total Services" data-suffix="%" data-donut='[["Car Services",36],["Medical Services",32],["Home Services",22],["Emergency Services",10]]'></div>
+      </section>
+    </div>
+
+    <div class="grid items-start gap-4 mt-6 grid-cols-[minmax(0,2fr)_minmax(0,1fr)] max-[991px]:grid-cols-[minmax(0,1fr)]">
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Nearby Requests on Map</h2>
+        <div class="relative min-h-[220px] overflow-hidden rounded-2xl bg-[#e4ecef] bg-[linear-gradient(115deg,transparent_46%,#fff_46%_50%,transparent_50%),linear-gradient(25deg,transparent_58%,#fff_58%_62%,transparent_62%),radial-gradient(circle_at_20%_30%,#cfe8c9_0_14%,transparent_15%),radial-gradient(circle_at_80%_70%,#cfe8c9_0_12%,transparent_13%)]">
+          <span class="absolute left-[var(--x)] top-[var(--y)] -translate-x-1/2 -translate-y-full text-[1.6rem] drop-shadow-md" style="--x:22%;--y:42%">📍</span>
+          <span class="absolute left-[var(--x)] top-[var(--y)] -translate-x-1/2 -translate-y-full text-[1.6rem] drop-shadow-md" style="--x:42%;--y:30%">🚑</span>
+          <span class="absolute left-[var(--x)] top-[var(--y)] -translate-x-1/2 -translate-y-full text-[1.6rem] drop-shadow-md" style="--x:55%;--y:70%">🏠</span>
+          <span class="absolute left-[var(--x)] top-[var(--y)] -translate-x-1/2 -translate-y-full text-[1.6rem] drop-shadow-md" style="--x:75%;--y:48%">🚗</span>
+        </div>
+        <ul class="mt-3 flex flex-wrap gap-2 [&_li]:rounded-full [&_li]:bg-brand-50 [&_li]:px-3 [&_li]:py-1 [&_li]:text-[.8rem] [&_li]:font-semibold"><li>🚗 Car Services</li><li>➕ Medical Services</li><li>🏠 Home Services</li><li>🚨 Emergency Services</li></ul>
+      </section>
+      <section class="rounded-2xl bg-white p-5 shadow-card">
+        <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Recent Requests <a href="admin-requests.html">View All</a></h2>
+        <ul class="flex flex-col gap-3" data-render="recent"></ul>
+      </section>
+    </div>
+
+    <section class="mt-6">
+      <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Quick Actions</h2>
+      <div class="grid gap-3 grid-cols-[repeat(auto-fit,minmax(min(100%,180px),1fr))]">
+        <a class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px flex-col rounded-lg bg-white p-3.5 text-navy-800 shadow-card" href="admin-reports.html"><span>📊</span>View Reports</a>
+        <a class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px flex-col rounded-lg bg-white p-3.5 text-navy-800 shadow-card" href="admin-requests.html"><span>📋</span>Review Requests</a>
+        <a class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px flex-col rounded-lg bg-white p-3.5 text-navy-800 shadow-card" href="admin-providers.html"><span>🧑‍🔧</span>Add Service Provider</a>
+        <a class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px flex-col rounded-lg bg-white p-3.5 text-navy-800 shadow-card" href="admin-services.html"><span>➕</span>Add New Service</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>

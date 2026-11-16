@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" role="img" aria-label="House with shield">
+  <polygon points="20,95 120,20 220,95 220,190 20,190" fill="#e3ecff"/>
+  <rect x="45" y="90" width="150" height="100" rx="8" fill="#fff"/>
+  <path d="M25 92L120 28l95 64" stroke="#1e88e5" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="100" y="60" width="38" height="30" fill="#2a87e0"/>
+  <rect x="106" y="66" width="12" height="9" fill="#d7ebff"/><rect x="120" y="66" width="12" height="9" fill="#d7ebff"/>
+  <rect x="106" y="77" width="12" height="9" fill="#d7ebff"/><rect x="120" y="77" width="12" height="9" fill="#d7ebff"/>
+  <rect x="58" y="112" width="40" height="40" fill="#2a87e0"/><rect x="64" y="118" width="12" height="12" fill="#d7ebff"/><rect x="80" y="118" width="12" height="12" fill="#d7ebff"/><rect x="64" y="134" width="12" height="12" fill="#d7ebff"/><rect x="80" y="134" width="12" height="12" fill="#d7ebff"/>
+  <rect x="142" y="112" width="40" height="40" fill="#2a87e0"/><rect x="148" y="118" width="12" height="12" fill="#d7ebff"/><rect x="164" y="118" width="12" height="12" fill="#d7ebff"/><rect x="148" y="134" width="12" height="12" fill="#d7ebff"/><rect x="164" y="134" width="12" height="12" fill="#d7ebff"/>
+  <path d="M108 190v-38a12 12 0 0 1 24 0v38z" fill="#1e88e5"/><circle cx="127" cy="170" r="2" fill="#fff"/>
+  <path d="M205 4l30 10v22c0 20-15 28-30 36-15-8-30-16-30-36V14z" transform="translate(-8 -2) scale(.9)" fill="#f5a31a"/>
+  <path d="M192 34l10 10 18-20" transform="translate(-8 -2)" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

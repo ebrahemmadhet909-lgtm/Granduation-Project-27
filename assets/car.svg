@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 120" role="img" aria-label="Car">
+  <ellipse cx="160" cy="108" rx="130" ry="8" fill="#cbdcf2"/>
+  <path d="M20 84l8-30 36-10 34-30c8-6 16-8 40-8h60c22 0 38 14 52 26l28 12 18 20 6 20-6 12H34z" fill="#1088ee" stroke="#0070dc" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M48 56l30-34c6-6 12-8 24-8h44v42z" fill="#dbeaff" stroke="#0070dc" stroke-width="4"/>
+  <path d="M154 14h30c14 2 28 14 40 28v14h-70z" fill="#dbeaff" stroke="#0070dc" stroke-width="4"/>
+  <rect x="12" y="60" width="16" height="12" rx="3" fill="#ffd590"/><rect x="268" y="60" width="16" height="12" rx="3" fill="#ffb27a"/>
+  <rect x="88" y="72" width="100" height="5" rx="2.500" fill="#bfe0ff"/>
+  <circle cx="76" cy="92" r="20" fill="#1f4872"/><circle cx="76" cy="92" r="9" fill="#d8e9ff"/>
+  <circle cx="232" cy="92" r="20" fill="#1f4872"/><circle cx="232" cy="92" r="9" fill="#d8e9ff"/>
+</svg>

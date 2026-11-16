@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ServiX | Home</title>
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="min-h-screen bg-page font-sans leading-normal text-ink" data-layout="client" data-active="home" data-title="Home">
+  <main class="mx-auto w-full max-w-[1400px] flex-1 p-6 max-[600px]:p-4">
+    <section class="flex items-center justify-between gap-6 rounded-[22px] bg-[linear-gradient(120deg,#cfe6ff,#e8f3ff)] px-8 py-7 max-[600px]:px-5 max-[600px]:py-5">
+      <div class="min-w-0 flex-1 [&_h1]:mb-2 [&_h1]:text-[clamp(1.5rem,3vw,2.3rem)] [&_h1+p]:max-w-[520px] [&_h1+p]:text-[#35557d]">
+        <p class="mb-1.5 text-[.85rem] font-extrabold uppercase tracking-[.06em] text-gold">ServiX Services</p>
+        <h1>Find the Right Service for Your Needs.</h1>
+        <p>Connect with trusted professionals for all your home needs. Quality services, reliable solutions, all in one place.</p>
+        <form class="mt-4 flex max-w-[480px] gap-1.5 rounded-full bg-navy-800 p-1 [&_input]:min-w-0 [&_input]:flex-1 [&_input]:border-0 [&_input]:bg-transparent [&_input]:px-3.5 [&_input]:text-white [&_input]:outline-none [&_input::placeholder]:text-[#b7cdea]" action="services.html" role="search">
+          <input type="search" name="q" placeholder="Search for a service or category..." aria-label="Search services">
+          <button class="inline-flex items-center justify-center gap-2 text-center font-bold transition hover:brightness-110 active:translate-y-px bg-brand-500 text-white rounded-full px-[18px] py-2.5 text-[.95rem]" type="submit">Search Services</button>
+        </form>
+      </div>
+      <img class="w-[clamp(120px,20vw,220px)] shrink-0" src="./publilc/IMGS/WhatsApp Image 2026-11-11 at 5.08.57 PM.jpeg" alt="">
+    </section>
+
+    <section class="mt-6">
+      <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">Choose from a wide range of trusted services, all in one place. <a href="services.html">View All →</a></h2>
+      <div class="group grid gap-4 grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))] tiles--dark" data-render="cards" data-source="home"></div>
+    </section>
+
+    <section class="mt-6 rounded-2xl bg-white p-5 shadow-card">
+      <h2 class="mb-3.5 flex items-center gap-2.5 text-[1.05rem] font-extrabold text-navy-800 before:h-[1.1em] before:w-1 before:rounded-sm before:bg-brand-500 before:content-[''] [&_a]:ml-auto [&_a]:text-[.85rem] [&_a]:font-semibold [&_a]:text-brand-600 group-[.card--dark]:text-white">How It Works</h2>
+      <div class="grid gap-3.5 grid-cols-[repeat(auto-fit,minmax(min(100%,200px),1fr))]">
+        <a class="flex items-center gap-3 [&_strong]:block" href="services.html"><span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 font-extrabold text-brand-600">1</span><span><strong>Choose a Service</strong><small>Find what you need</small></span></a>
+        <a class="flex items-center gap-3 [&_strong]:block" href="booking.html"><span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 font-extrabold text-brand-600">2</span><span><strong>Book a Provider</strong><small>Pick a suitable time</small></span></a>
+        <a class="flex items-center gap-3 [&_strong]:block" href="request-service.html"><span class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-brand-100 font-extrabold text-brand-600">3</span><span><strong>Get Help</strong><small>Enjoy quality service</small></span></a>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+</body>
+</html>
